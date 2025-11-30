@@ -1,50 +1,51 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grand Theft Auto: San Andreas</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="hero">
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="https://cdn.pixabay.com/video/2023/07/11/169196-838755581_large.mp4" type="video/mp4" />
+      </video>
+    </div>
     <div class="overlay">
-      <h1>Grand Theft Auto: San Andreas</h1>
-      <p>Возвращение легенды. Открой мир свободы, преступлений и приключений.</p>
-      <a href="#game" class="btn">Узнать больше</a>
+      <h1 class="title">GRAND THEFT AUTO: SAN ANDREAS</h1>
+      <p class="subtitle">The West Coast. The Streets. The Legend.</p>
+      <a href="#trailer" class="btn">Watch Trailer</a>
     </div>
   </header>
 
-  <section id="game" class="section">
-    <div class="container">
-      <h2>История города, который никогда не спит</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>Три города</h3>
-          <p>Лос-Сантос, Сан-Фиерро, Лас-Вентурас — каждый со своей культурой и опасностями.</p>
-        </div>
-        <div class="feature">
-          <h3>Жизнь на улицах</h3>
-          <p>Участвуй в уличных гонках, преступных синдикатах и борьбе за власть.</p>
-        </div>
-        <div class="feature">
-          <h3>Свобода действий</h3>
-          <p>Делай то, что хочешь — будь кем угодно. Мир — твоя игровая площадка.</p>
-        </div>
-      </div>
+  <section class="features">
+    <div class="feature">
+      <h2>Open World</h2>
+      <p>Explore the vast cities of Los Santos, San Fierro, and Las Venturas.</p>
+    </div>
+    <div class="feature">
+      <h2>Story-Driven</h2>
+      <p>Join CJ's journey to reclaim his neighborhood and uncover the truth.</p>
+    </div>
+    <div class="feature">
+      <h2>Classic Gameplay</h2>
+      <p>Drive, fight, fly, and survive in the ultimate gangster adventure.</p>
     </div>
   </section>
 
-  <section class="trailer">
-    <div class="overlay-dark">
-      <h2>Трейлер</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/evQ_3LjQwnA" frameborder="0" allowfullscreen></iframe>
+  <section id="trailer" class="trailer">
+    <h2>Official Trailer</h2>
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8sB4mAVDYaE" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Grand Theft Auto: San Andreas. Этот сайт создан в демонстрационных целях.</p>
+    <p>&copy; 2024 Rockstar Games. This is a fan-made landing page.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
