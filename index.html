@@ -8,43 +8,49 @@
 </head>
 <body>
   <header class="hero">
-    <div class="video-container">
-      <video autoplay muted loop playsinline>
-        <source src="https://cdn.pixabay.com/video/2023/07/11/169196-838755581_large.mp4" type="video/mp4" />
-      </video>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/ru/0/09/Grand_Theft_Auto_San_Andreas.png" alt="GTA: San Andreas Logo" />
     </div>
-    <div class="overlay">
-      <h1 class="title">GRAND THEFT AUTO: SAN ANDREAS</h1>
-      <p class="subtitle">The West Coast. The Streets. The Legend.</p>
-      <a href="#trailer" class="btn">Watch Trailer</a>
+    <video autoplay muted loop class="background-video">
+      <source src="https://www.youtube.com/watch?v=6w3_7bDxGzg" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>WELCOME TO SAN ANDREAS</h1>
+      <p>The biggest, most dynamic and diverse open world ever created.</p>
+      <button class="cta-button" onclick="document.querySelector('.trailer-modal').style.display='flex'">Watch Trailer</button>
     </div>
   </header>
 
   <section class="features">
     <div class="feature">
       <h2>Open World</h2>
-      <p>Explore the vast cities of Los Santos, San Fierro, and Las Venturas.</p>
+      <p>Explore the vast cities, mountains, deserts and countryside of San Andreas.</p>
     </div>
     <div class="feature">
       <h2>Story-Driven</h2>
-      <p>Join CJ's journey to reclaim his neighborhood and uncover the truth.</p>
+      <p>Play as Carl "CJ" Johnson and uncover corruption, betrayal and revenge.</p>
     </div>
     <div class="feature">
-      <h2>Classic Gameplay</h2>
-      <p>Drive, fight, fly, and survive in the ultimate gangster adventure.</p>
+      <h2>Customization</h2>
+      <p>Upgrade your character, vehicles, and even your wardrobe.</p>
     </div>
   </section>
 
-  <section id="trailer" class="trailer">
+  <section class="trailer">
     <h2>Official Trailer</h2>
-    <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/8sB4mAVDYaE" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6w3_7bDxGzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2024 Rockstar Games. This is a fan-made landing page.</p>
+  <footer>
+    <p>&copy; 2023 Rockstar Games. This is a fan-made landing page.</p>
   </footer>
+
+  <div class="trailer-modal">
+    <span class="close-button" onclick="document.querySelector('.trailer-modal').style.display='none'">&times;</span>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/6w3_7bDxGzg?autoplay=1" title="Trailer" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+  </div>
 
   <script src="script.js"></script>
 </body>
