@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 :root {
-  --primary: #da1b26;
-  --secondary: #1c1c1c;
-  --text: #f2f2f2;
-  --accent: #f9a825;
+  --primary: #ff0000;
+  --secondary: #000000;
+  --text: #ffffff;
+  --bg-dark: #111;
 }
 
 * {
@@ -15,76 +15,75 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background: var(--bg-dark);
   color: var(--text);
-  background: var(--secondary);
-  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .hero {
+  position: relative;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://wallpapercave.com/wp/wp1846473.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  animation: fadeIn 2s ease-in-out;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .overlay {
+  z-index: 2;
   padding: 2rem;
+  animation: fadeIn 2s ease-in;
 }
 
-h1 {
-  font-size: 3.5rem;
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
   margin-bottom: 1rem;
-  color: var(--primary);
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
-  animation: slideUp 1s ease-out;
+  letter-spacing: 2px;
+  animation: glitch 5s infinite;
 }
 
-p {
-  font-size: 1.2rem;
+.subtitle {
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  animation: fadeIn 1.5s ease-in;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .btn {
-  display: inline-block;
   padding: 1rem 2rem;
-  background-color: var(--primary);
+  background: var(--primary);
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 4px;
   text-transform: uppercase;
-  transition: all 0.3s ease;
-  animation: pulse 2s infinite;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
 }
 
 .btn:hover {
-  background-color: #b0141e;
-  transform: scale(1.05);
-}
-
-.section {
-  padding: 5rem 2rem;
-  background: #111;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: var(--accent);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background: #cc0000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.5);
 }
 
 .features {
@@ -92,91 +91,90 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  padding: 4rem 2rem;
+  background: var(--secondary);
 }
 
 .feature {
   flex: 1;
   min-width: 250px;
   max-width: 350px;
-  padding: 2rem;
-  background: rgba(30, 30, 30, 0.8);
-  border-radius: 10px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+  border-left: 3px solid var(--primary);
+  background: rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s;
 }
 
 .feature:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
-.feature h3 {
+.feature h2 {
   color: var(--primary);
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .trailer {
-  padding: 5rem 2rem;
-  background: url('https://i.ytimg.com/vi/evQ_3LjQwnA/maxresdefault.jpg') no-repeat center center/cover;
+  padding: 4rem 2rem;
   text-align: center;
+  background: #1a1a1a;
 }
 
-.overlay-dark {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 3rem;
-  border-radius: 15px;
+.trailer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.video-wrapper {
   max-width: 800px;
   margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
-iframe {
-  margin-top: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.video-wrapper iframe {
   width: 100%;
-  height: 400px;
+  height: 450px;
+  border: none;
 }
 
 .footer {
   text-align: center;
   padding: 2rem;
-  background: #000;
-  color: var(--text);
+  background: var(--secondary);
   font-size: 0.9rem;
+  color: #aaa;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+@keyframes glitch {
+  0% { text-shadow: 2px 2px 0 #00ff00, -2px -2px 0 #ff00ff, 0 0 10px #fff; }
+  25% { text-shadow: -2px -2px 0 #00ff00, 2px 2px 0 #ff00ff, 0 0 10px #fff; }
+  50% { text-shadow: 2px -2px 0 #00ff00, -2px 2px 0 #ff00ff, 0 0 10px #fff; }
+  75% { text-shadow: -2px 2px 0 #00ff00, 2px -2px 0 #ff00ff, 0 0 10px #fff; }
+  100% { text-shadow: 2px 2px 0 #00ff00, -2px -2px 0 #ff00ff, 0 0 10px #fff; }
 }
 
 @media (max-width: 768px) {
-  h1 {
+  .title {
     font-size: 2.5rem;
   }
-  h2 {
-    font-size: 2rem;
+  .subtitle {
+    font-size: 1.2rem;
   }
   .features {
     flex-direction: column;
     align-items: center;
+  }
+  .video-wrapper iframe {
+    height: 300px;
   }
 }
