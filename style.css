@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary: #da1b26;
+  --secondary: #1c1c1c;
+  --text: #f2f2f2;
+  --accent: #f9a825;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  background: var(--secondary);
+  line-height: 1.6;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://wallpapercave.com/wp/wp1846473.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.overlay {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+  animation: slideUp 1s ease-out;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.btn:hover {
+  background-color: #b0141e;
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 5rem 2rem;
+  background: #111;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--accent);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feature {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  padding: 2rem;
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.trailer {
+  padding: 5rem 2rem;
+  background: url('https://i.ytimg.com/vi/evQ_3LjQwnA/maxresdefault.jpg') no-repeat center center/cover;
+  text-align: center;
+}
+
+.overlay-dark {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3rem;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+iframe {
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 400px;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
